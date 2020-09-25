@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HelloWorld : MonoBehaviour
+{
+    int maxGuess = 1001;                //1001 for bug reasons, max is only 1000
+    int minGuess = 1;
+    int guess = 500;
+
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("Hey whats good this is the number wiz dawg!");                   //intro to game
+        Debug.Log("YOU must guess a number!");                                      //directions 
+        Debug.Log(" the highest number u can chose is :" + (maxGuess - 1));             // subtract 1 for game bug reasons
+        Debug.Log("the lowest is :"+ minGuess );                                 //directions
+        Debug.Log("my first guess isssssss:"+ guess );                               //directions
+        Debug.Log("press up if the number is higher");                               //directions
+        Debug.Log("press down if the number is lower");                              //directions
+        Debug.Log("press enter if it is right");                                         //directions
+
+
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("return"))                               //the command for the enter button for when you get the right answer
+        {
+            print("yoooo dawg i got the right numba");
+        }
+        if (Input.GetKeyDown("up"))                                     //the command for the up arrow when your number is higher
+        {
+            minGuess = guess;
+            guess = (maxGuess + minGuess) / 2;
+            print("my new guess is" + guess);
+        }
+        if (Input.GetKeyDown("down"))                                   //the command for the down arrow if your number is lower
+        {
+            maxGuess = guess;
+            guess = (maxGuess + minGuess) / 2;                          //the calculation for how the numbers are averaged A
+            print("my new guess is" + guess);
+
+
+
+        }
+
+
+    }
+            
+   
+}
