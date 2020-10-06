@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CastleWorld : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("you wake up in a old castle that is broken down and looks like at any time it will fall apart.");
+        Debug.Log("If you chose the wrong path it will spwan you back in this room and you will have to make all of your choices again");
+        Debug.Log("Make the right choices or be prepared to be trapped in here FOREVER");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (input.GetDownKey("up arrow")) ;
+        {
+            Debug.Log("You walk into the top hallway and its very dark, you countine to walk untill you lose the ground and fall into a pit, start over");
+
+        }
+
+        if (input.GetDownKey("down arrow"));
+        {
+            Debug.Log("You walk into a very dim lit hallways, it seems to lead into a oter room with two more passages.");
+            Debug.Log("You hear many different types of whispers and you take a step back but then get a feeling that this is thw way you should head");
+            Debug.Log("end up in a dark room with floating candles everywhere, you see one lit up passage, one very dim passage and one room with little to no light at all.");
+        }
+        if (input.GetDownKey("left arrow")) ;
+        {
+            Debug.Log("this passagw leads to a very small room that has already been caved in, a mans body is sticking out of all the rocks.");
+            Debug.Log("You better turn back and be carful");
+            //start of 2nd choices
+            if (input.GetDownKey("D")) ;
+            {
+                Debug.Log("The very dim passage leads you to a room with 2 very small hallways");
+                Debug.Log("the whispers go away, seems like you are safe for now but better keep moving.");
+            }
+        
+        
+        }
+    
+   
+    }
+}
